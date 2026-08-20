@@ -1,0 +1,22 @@
+{
+  "best_family": "bidirectional_lstm",
+  "best_model_name": "bidirectional_lstm",
+  "pipeline_mode": "default",
+  "training_config": {
+    "initial_epochs": 12,
+    "batch_size": 32,
+    "candidate_models": [
+      "stacked_lstm",
+      "bidirectional_lstm"
+    ],
+    "synthetic_rows": 8760,
+    "xai_sample_size": 60,
+    "xai_background_size": 24,
+    "anomaly_sample_days": 7
+  },
+  "tensorflow_gpus": [
+    "/physical_device:GPU:0"
+  ],
+  "total_training_time_seconds": 395.6307270526886,
+  "total_runtime_seconds": 620.059814453125
+}

@@ -1,0 +1,11 @@
+{
+  "explainer": "deterministic attribution fallback after SHAP errors: in user code:\n\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\shap\\explainers\\_deep\\deep_tf.py\", line 247, in grad_graph  *\n        out = self.model(shap_rAnD)\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\keras\\utils\\traceback_utils.py\", line 70, in error_handler  **\n        raise e.with_traceback(filtered_tb) from None\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\shap\\explainers\\_deep\\deep_tf.py\", line 378, in custom_grad\n        out = op_handlers[type_name](self, op, *grads) # we cut off the shap_ prefex before the lookup\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\shap\\explainers\\_deep\\deep_tf.py\", line 667, in handler\n        return linearity_with_excluded_handler(input_inds, explainer, op, *grads)\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\shap\\explainers\\_deep\\deep_tf.py\", line 674, in linearity_with_excluded_handler\n        assert not explainer._variable_inputs(op)[i], str(i) + \"th input to \" + op.name + \" cannot vary!\"\n    File \"C:\\Users\\Work\\anaconda3\\envs\\est-gpu\\lib\\site-packages\\shap\\explainers\\_deep\\deep_tf.py\", line 224, in _variable_inputs\n        out[i] = t.name in self.between_tensors\n\n    AttributeError: Exception encountered when calling layer \"forward_lstm\" \"                 f\"(type LSTM).\n    \n    'TFDeep' object has no attribute 'between_tensors'\n    \n    Call arguments received by layer \"forward_lstm\" \"                 f\"(type LSTM):\n      \u2022 inputs=tf.Tensor(shape=(48, 168, 42), dtype=float32)\n      \u2022 mask=None\n      \u2022 training=False\n      \u2022 initial_state=None\n; Instance must have 1 or 2 dimensions!",
+  "sample_size": 60,
+  "top_features": [
+    "rolling_168h_mean",
+    "rolling_24h_mean",
+    "same_hour_last_week",
+    "lag_168h",
+    "rolling_12h_mean"
+  ]
+}

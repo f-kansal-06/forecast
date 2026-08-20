@@ -1,0 +1,8 @@
+{
+  "clean_mae": 313603.09375,
+  "injected_mae": 313672.125,
+  "mae_degradation": 69.03125,
+  "clean_rmse": 371847.53125,
+  "injected_rmse": 371926.09375,
+  "rmse_degradation": 78.5625
+}
